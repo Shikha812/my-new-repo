@@ -1,0 +1,34 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      # Step 2: Add a custom step with your email
+      - name: 23ds2000134@ds.study.iitm.ac.in
+        run: echo "Hello from the GitHub Action!"
+
+      # Step 3: Example of installing dependencies
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          # Add other setup commands here
+
+      # Step 4: Example of running tests
+      - name: Run tests
+        run: |
+          echo "Running tests..."
+          # Add test commands here
